@@ -37,7 +37,7 @@ resource "aws_security_group" "blog" {
 }
 
 resource "aws_security_group_rule" "blog_http_in" {
-  tyep = "ingress"
+  type = "ingress"
   from_port   = 80
   to_port     = 80
   protocol    = "tcp"
@@ -47,7 +47,7 @@ resource "aws_security_group_rule" "blog_http_in" {
 }
 
 resource "aws_security_group_rule" "blog_https_in" {
-  tyep = "ingress"
+  type = "ingress"
   from_port   = 443
   to_port     = 443
   protocol    = "tcp"
@@ -57,7 +57,7 @@ resource "aws_security_group_rule" "blog_https_in" {
 }
 
 resource "aws_security_group_rule" "blog_everything_out" {
-  tyep = "engress"
+  type = "engress"
   from_port   = 0
   to_port     = 0
   protocol    = "-1"
