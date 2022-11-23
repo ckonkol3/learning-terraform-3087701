@@ -31,7 +31,7 @@ module "blog_vpc" {
   }
 }
 
-module "autoscaling" "blog" {
+resource "autoscaling" "blog" {
   source   = "terraform-aws-modules/autoscaling/aws"
   version  = "6.5.3"
   
@@ -65,12 +65,6 @@ module "blog_alb" {
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
-      targets = {
-        my_target = {
-          target_id = aws_instance.blog.id
-          port = 80
-        }
-      }
     }
   ]
 
