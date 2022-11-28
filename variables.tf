@@ -3,7 +3,7 @@ variable "instance_type" {
   default     = "t3.nano"
 }
 
-variable "ami filter" {
+variable "ami_filter" {
   description = "Type of EC2 instance to provision"
 
   type = object({
